@@ -28,6 +28,3 @@ It's a personal record, but I hope it can also offer insight or encouragement to
 
 Contributing / Feedback
 This is a personal project, but I welcome constructive feedback or well wishes. 
-Feel free to open an issue on this repository if you have any suggestions or encounter any problems.
-
-Wishing you well on your recovery journey!
