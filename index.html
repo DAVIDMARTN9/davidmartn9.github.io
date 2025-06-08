@@ -10,23 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!--         Application Structure Plan: The SPA features a chronological, day-by-day diary.
-        Key interactive elements include 'Previous/Next Day' buttons and a direct day selector for navigation.
-        A language toggle allows switching between English and Spanish.
-        A 'Show Progress' button reveals a dedicated section with a chart visualizing key recovery metrics.
-        This structure prioritizes intuitive navigation, multilingual support, and dynamic data presentation.
-    -->
-    <!--         Visualization & Content Choices:
-        - Report Info: Daily diary entries (text). Goal: Allow user to read specific day's account. Viz/Presentation: Full text display in a content card.
-        - Report Info: Key people (Eniko, Dani, Carlos, Doctors). Goal: Emphasize support network. Viz/Presentation: Bolding names within text.
-        - Report Info: Medical procedures/milestones (surgery, X-ray, physio). Goal: Highlight key events. Viz/Presentation: Bolding terms within text.
-        - Report Info: Chronological progression. Goal: Navigate through time. Viz/Presentation: Nav buttons (Prev/Next, Day Selectors).
-        - Report Info: Multilingual support. Goal: Provide diary in English and Spanish. Viz/Presentation: Single language toggle button.
-        - Report Info: Exercise progress (sets, time, KCALs, distance). Goal: Visualize physical recovery. Viz/Presentation: Multi-dataset Bar chart.
-        - Confirmation: No SVG/Mermaid. Chart.js CDN included. Focus on interactive text navigation and data visualization.
-    -->
-    <!-- iOS/Safari Compatibility Note: This HTML structure, Tailwind CSS, and standard JavaScript (including Chart.js) are designed for broad web compatibility. -->
-
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -36,10 +19,15 @@
             background-color: #ffffff;
             border-radius: 1.5rem; /* More rounded corners */
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
-            padding: 2.5rem; /* More generous padding */
+            padding: 1.5rem; /* Reduced padding for mobile */
             max-width: 900px; /* Slightly wider main container */
             margin: 2rem auto; /* Centered with margin */
             width: 95%; /* Responsive width */
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .container-wrapper {
+                padding: 2.5rem;
+            }
         }
         @media (min-width: 768px) {
             .container-wrapper {
@@ -185,13 +173,12 @@
             <button id="toggle-progress-button" class="diary-nav-button">📊 Show Progress</button>
         </div>
         <header class="text-center mb-10">
-            <h1 id="main-title" class="text-5xl font-extrabold text-gray-900 leading-tight">My Hip Replacement Recovery Diary</h1>
+            <h1 id="main-title" class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">My Hip Replacement Recovery Diary</h1>
             <p id="subtitle" class="text-gray-600 mt-4 text-xl font-medium">Navigating recovery, one day at a time. Every step is progress.</p>
         </header>
         <nav class="mb-8">
             <div id="day-selector-container" class="flex flex-wrap justify-center gap-2.5 mb-6">
-                <!-- Day selector buttons will be populated by JavaScript -->
-            </div>
+                </div>
             <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <button id="prev-day-button" class="diary-nav-button w-full sm:w-auto">Previous Day</button>
                 <h2 id="current-day-title" class="text-2xl sm:text-3xl font-semibold text-gray-800 text-center mx-4 flex-grow"></h2>
@@ -211,8 +198,7 @@
                 <h4 id="exercise-details-title" class="text-2xl font-semibold text-gray-700 mb-5">Daily Exercise Breakdown</h4>
                 <div id="current-day-stats" class="text-lg text-gray-800 mb-6 space-y-2"></div>
                 <ul id="exercise-list" class="list-disc ml-6">
-                    <!-- Exercise details will be populated by JavaScript -->
-                </ul>
+                    </ul>
             </div>
         </section>
         <footer class="text-center mt-16 text-gray-500 text-sm">
@@ -274,12 +260,25 @@
             title: "Day 10: Friday, June 6, 2025",
             shortTitle: "Day 10",
             exerciseSets: 8,
-            moveKcals: 584, /* Adjusted to be more in line with previous days and account for walk */
-            exerciseMinutes: 80, /* Adjusted to be more in line with previous days and account for walk */
-            standHours: 15, /* Adjusted for increased standing due to walk */
+            moveKcals: 584,
+            exerciseMinutes: 80,
+            standHours: 15,
             walkDistanceKm: 1.36,
             contentEN: `<p>Today was a great day with significant improvements. I managed to walk a bit more, taking an evening stroll of around **1.36 kilometers** near home. Everything went well, and I started putting a little more weight on my affected leg, which felt like a big step forward. I also had a good night's sleep, thanks to an extra push of **morphine** during the night. Getting that necessary rest is crucial for recovery.</p><p>I completed **8 sets** of exercises, which was quite good. One new development today was the appearance of more **bruises on the back of my leg**, specifically on my hamstrings and behind my knee. This is likely due to blood that remained inside after the surgery finally making its way to the surface, turning the entire back part of my leg quite purple.</p><p>Regarding my diet, I'm sticking to the same approach: **healthy food all the time**, making sure not to overeat. I consume what my body needs, maybe a little more, but given that I'm mostly lying down and doing minimal exercise, my energy levels are quite high. Despite that, I'm conscious about not overeating, so maintaining a healthy diet is key.</p><p>The rest of the day was pretty standard. I received my daily injection of **heparin** to prevent clots and continued taking **Paracetamol every 8 hours** along with my vitamins. Overall, it was a very positive day. I'm feeling quite good and energetic. **Eniko** was at home with me, which was a huge help, and we enjoyed some nice food and just relished the day.</p>`,
             contentES: `<p>¡Hoy fue un gran día con mejoras significativas! Conseguí caminar un poco más, dando un paseo por la tarde de unos **1.36 kilómetros** cerca de casa. Todo fue bien y empecé a poner un poco más de peso en mi pierna afectada, lo que me pareció un gran avance. También dormí muy bien, gracias a una dosis extra de **morfina** durante la noche. Conseguir ese descanso tan necesario es crucial para la recuperación.</p><p>Completé **8 series** de ejercicios, lo cual estuvo bastante bien. Una novedad hoy fue la aparición de más **hematomas en la parte trasera de mi pierna**, específicamente en los isquiotibiales y detrás de la rodilla. Esto probablemente se debe a que la sangre que quedó dentro después de la cirugía finalmente está saliendo a la superficie, dejando toda la parte trasera de mi pierna bastante morada.</p><p>En cuanto a mi dieta, sigo con el mismo enfoque: **comida sana todo el tiempo**, asegurándome de no comer en exceso. Consumo lo que mi cuerpo necesita, quizás un poco más, pero dado que en su mayoría estoy tumbado y hago poco ejercicio, mis niveles de energía son bastante altos. A pesar de eso, soy consciente de no excederme con la comida, así que mantener una dieta saludable es clave.</p><p>El resto del día fue bastante normal. Recibí mi inyección diaria de **heparina** para prevenir coágulos y continué tomando **Paracetamol cada 8 horas** junto con mis vitaminas. En general, fue un día muy positivo. Me siento bastante bien y con energía. **Eniko** estuvo en casa conmigo, lo cual fue de gran ayuda, y disfrutamos de buena comida y simplemente del día.</p>`
+        },
+        {
+            id: "day-11",
+            date: "2025-06-07",
+            title: "Day 11: Saturday, June 7, 2025",
+            shortTitle: "Day 11",
+            exerciseSets: 10,
+            moveKcals: 598,
+            exerciseMinutes: 96,
+            standHours: 18,
+            walkDistanceKm: 0,
+            contentEN: `<p>Day 11 began on a positive note after another good night's sleep and a standard breakfast. I felt quite well and was ready to tackle the day's exercise target. The goal was <strong>10 sets</strong>, and I successfully completed them, clocking in <strong>96 minutes</strong> of exercise, burning <strong>598 kilocalories</strong>, and achieving <strong>18 hours</strong> of standing time.</p><p>A significant evolution today was starting to walk while putting more weight on my affected leg. It’s a definite improvement from previous days. The muscles still feel quite weak, so I'm avoiding putting my full weight on it, but I can feel that the reliance on crutches is lessening, and walking is becoming easier. The pain continues its trend of continuous improvement; it hasn't vanished, but it's becoming less and less noticeable, which is a huge advantage.</p><p>The wound has reached a new stage: it's become <strong>really itchy</strong>. Eleven days post-surgery, the main cover is still on. While I've been keeping the surrounding area clean, I haven't removed it yet. I'm taking the itchiness as a positive sign that it's healing well underneath. I have an appointment with the doctors this coming Monday to see if the cover can be removed. Importantly, there are no signs of infection.</p><p>A minor issue popped up during my exercises – a small, uncommon pain in my <strong>quadriceps</strong>. I massaged the area with a bit of cream, and thankfully, the pain subsided. The rest of the day was quiet and spent at home, focusing on a slow but steady recovery at the right pace.</p>`,
+            contentES: `<p>El día 11 comenzó con una nota positiva después de otra buena noche de sueño y un desayuno estándar. Me sentía bastante bien y listo para afrontar el objetivo de ejercicio del día. La meta eran <strong>10 series</strong>, y las completé con éxito, registrando <strong>96 minutos</strong> de ejercicio, quemando <strong>598 kilocalorías</strong> y logrando <strong>18 horas</strong> de tiempo de pie.</p><p>Una evolución significativa hoy fue que empecé a caminar poniendo más peso en mi pierna afectada. Es una mejora definitiva respecto a los días anteriores. Los músculos todavía se sienten bastante débiles, así que evito poner todo mi peso sobre ella, pero puedo sentir que la dependencia de las muletas está disminuyendo y caminar se está volviendo más fácil. El dolor continúa su tendencia de mejora continua; no ha desaparecido, pero se nota cada vez menos, lo cual es una gran ventaja.</p><p>La herida ha llegado a una nueva etapa: ahora <strong>pica mucho</strong>. Once días después de la cirugía, la cubierta principal todavía está puesta. Aunque he estado manteniendo limpia la zona de alrededor, aún no la he quitado. Me tomo el picor como una señal positiva de que está sanando bien por debajo. Tengo una cita con los médicos este próximo lunes para ver si se puede quitar la cubierta. Es importante destacar que no hay signos de infección.</p><p>Surgió un problema menor durante mis ejercicios: un pequeño dolor poco común en mis <strong>cuádriceps</strong>. Masajeé la zona con un poco de crema y, afortunadamente, el dolor desapareció. El resto del día fue tranquilo y lo pasé en casa, centrándome en una recuperación lenta pero constante y al ritmo adecuado.</p>`
         },
         { id: "week-1-summary", date: "2025-06-03", title: "Week 1 Summary: Days 1 to 7", shortTitle: "Week 1", isSummary: true, contentEN: `<h3 class="text-2xl font-bold text-gray-800 mb-4">Looking Back at Week 1: My Recovery Journey So Far</h3><p>This first week after surgery has been a powerful testament to balancing pushing forward with honoring the body's need for rest. From the initial hurdles of regaining mobility and managing discomfort, every day has been a conscious step in the recovery journey. The unwavering support from my incredible family has been the bedrock of this period, transforming practical challenges and emotional moments into shared victories.</p><p>We've celebrated significant milestones: getting discharged on Day 1 was huge, then jumping straight into gentle, purposeful exercises. And that first proper bowel movement on Day 3? Pure relief! While a deep, nagging ache, particularly in the hamstrings and around the new hip, has been a persistent companion, my mobility has steadily improved. I'm walking faster with my crutches, and I even took those first tentative steps bearing weight on the affected leg.</p><h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Victories: What Propelled Me Forward</h4><ul class="list-disc ml-6"><li><strong>Strategic Preparation:</strong> Proactive efforts in diet and fitness pre-surgery laid a strong foundation for recovery.</li><li><strong>Disciplined Diet:</strong> Maintaining a consistent healthy diet, thanks to <strong>Eniko's</strong> diligent support, providing essential nourishment without overeating.</li><li><strong>Consistent Exercise Adherence:</strong> Steadily met daily exercise targets (progressing from 2 to 10-12 sets), ensuring regular, gentle movement to prevent stiffness and aid recovery.</li><li><strong>Effective Ice Therapy:</strong> Regular use of ice packs proved invaluable for managing swelling and providing pain relief.</li><li><strong>Balanced Pain Management:</strong> Maintained minimal painkiller dosages while ensuring enough relief to remain active and complete exercises.</li><li><strong>Proactive Supplementation:</strong> Early introduction of <strong>Calcium, Magnesium, Vitamin D, Iron, B12, and Vitamin C</strong> to support bone healing and blood levels.</li><li><strong>Indispensable Family Support:</strong> The continuous presence and practical help from <strong>Eniko</strong> and <strong>Dani</strong> were crucial for daily tasks and maintaining a positive mindset.</li><li><strong>Early Bowel Management:</strong> Successfully addressing bowel movements by Day 3 significantly improved overall comfort and well-being.</li><li><strong>Consistent Movement:</strong> Prioritized getting out of bed often to encourage gentle movement and maintain energy levels.</li></ul><h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Insights & Opportunities: What I'd Refine Next Time</h4><ul class="list-disc ml-6"><li><strong>Optimizing Comfort for Sitting:</strong> Investing in a dedicated set of wedged pillows from day one would have dramatically improved comfort during prolonged periods of sitting in bed, especially in the first two days.</li><li><strong>Initial Diet Strategy:</strong> My early post-op diet choices (salad, chicken, rice) unintentionally contributed to constipation. A more proactive approach with laxative-friendly foods would be beneficial next time.</li><li><strong>Advanced Cold Therapy:</strong> While manual ice application was effective, exploring a continuous cold therapy machine could offer more consistent and less labor-intensive relief.</li><li><strong>Personalized Pain Management:</strong> Acknowledging that pain tolerance varies, a more flexible painkiller strategy might be necessary for others to ensure sufficient energy for rehabilitation.</li><li><strong>Self-Directed Physiotherapy:</strong> The absence of ongoing NHS physiotherapy highlights the critical need for personal discipline and consistent adherence to the prescribed exercise routine for continued progress. This journey demands autoliderazgo.</li><li><strong>Addressing Deep Pain:</strong> The persistent internal pain, particularly in hamstrings and around the implant, requires ongoing attention and adaptation of exercises to manage discomfort while promoting healing.</li></ul>`, contentES: `<h3 class="text-2xl font-bold text-gray-800 mb-4">Mirando Atrás a la Semana 1: Mi Viaje de Recuperación Hasta Ahora</h3><p>Esta primera semana después de la cirugía ha sido una prueba poderosa de cómo equilibrar el avance con la necesidad esencial de descanso. Desde los desafíos iniciales de recuperar la movilidad y manejar la incomodidad, cada día ha sido un paso consciente en el camino de la recuperación. El apoyo inquebrantable de mi increíble familia ha sido la base de este período, transformando los desafíos prácticos y los momentos emocionales en victorias compartidas.</p><p>Hemos celebrado hitos significativos: el alta exitosa el Día 1, el inicio inmediato de ejercicios suaves y con propósito, y la crucial evacuación intestinal el Día 3 que trajo un inmenso alivio. Aunque un dolor interno profundo, particularmente en los isquiotibiales y alrededor del nuevo implante, ha sido un compañero constante, mi movilidad ha mejorado constantemente, permitiéndome caminar más rápido con muletas e incluso dar esos primeros pasos tentativos apoyando peso en la pierna operada.</p><h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Victorias: ¡Lo que me Impulsó Hacia Adelante!</h4><ul class="list-disc ml-6"><li><strong>Preparación Estratégica:</strong> Los esfuerzos proactivos en dieta y estado físico antes de la cirugía sentaron una base sólida para una recuperación más fluida. Es evidente que invertir en tu cuerpo de antemano rinde frutos.</li><li><strong>Disciplina Nutricional:</strong> Mantuve una dieta saludable y consistente, apoyada expertamente por la dedicación de <strong>Eniko</strong>, ha sido vital. Alimentar mi cuerpo con precisión, sin comer en exceso, ha sido clave.</li><li><strong>Adherencia Constante al Ejercicio:</strong> Cumplí constantemente los objetivos diarios de ejercicio (progresando de 2 a 10-12 series), asegurando un movimiento regular y suave para prevenir la rigidez y ayudar a la recuperación.</li><li><strong>Dominio de la Terapia de Frío:</strong> El uso regular y diligente de compresas de hielo resultó ser un aliado indispensable para combatir la hinchazón y proporcionar el tan necesario alivio del dolor.</li><li><strong>Manejo Consciente del Dolor:</strong> Navegar el dolor con un enfoque equilibrado, manteniendo las dosis de analgésicos al mínimo, pero asegurando suficiente alivio para mantenerme activo y priorizar el descanso reparador.</li><li><strong>Apoyo Interno Proactivo:</strong> La integración temprana de suplementos como <strong>Calcio, Magnesio, Vitamina D, Hierro, B12 y Vitamina C</strong> desde el principio ha sido un esfuerzo consciente para apoyar la cicatrización ósea y optimizar los sistemas internos de mi cuerpo.</li><li><strong>La Familia es Clave:</strong> La presencia inquebrantable y la asistencia práctica de <strong>Eniko</strong> y <strong>Dani</strong> han sido, sin duda, transformadoras. Su apoyo en todos los niveles, desde las tareas diarias hasta levantarme el ánimo, ha sido mi mayor fortaleza.</li><li><strong>Alivio Temprano:</strong> Lograr una evacuación intestinal exitosa para el Día 3 trajo un inmenso confort físico y psicológico, demostrando que abordar estos desafíos tempranos es primordial.</li><li><strong>Movimiento Constante:</strong> Prioricé levantarme de la cama con frecuencia para fomentar el movimiento suave y mantener los niveles de energía.</li></ul><h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Aprendizajes y Oportunidades: ¡Lo que Mejoraría la Próxima Vez!</h4><ul class="list-disc ml-6"><li><strong>Comodidad al Sentarse:</strong> Debería haber invertido en un juego de almohadas tipo cuña dedicado desde el primer día. Habrían mejorado drásticamente la comodidad durante períodos prolongados sentado en la cama, especialmente en esos días iniciales y delicados.</li><li><strong>Ajustes en la Dieta Inicial:</strong> Las elecciones dietéticas tempranas después de la operación (ensalada, pollo, arroz) contribuyeron involuntariamente al estreñimiento. A más proactiva approach con laxative-friendly foods would be beneficial next time.</li><li><strong>Terapia de Frío Avanzada:</strong> Aunque la aplicación manual de hielo fue efectiva, explorar una máquina de terapia de frío continua podría ofrecer un enfoque más constante y menos laborioso para manejar la incomodidad y la hinchazón.</li><li><strong>Estrategia de Dolor Personalizada:</strong> Reconociendo que la tolerancia al dolor es profundamente personal, una estrategia de analgésicos más flexible podría ser necesaria para otros para asegurar que tengan la energía requerida para una rehabilitación diligente.</li><li><strong>Rehabilitación Autodirigida:</strong> La ausencia de fisioterapia continua del NHS subraya la necesidad crítica de disciplina personal y adherencia inquebrantable a la rutina de ejercicios prescrita para un progreso continuo. Este viaje exige autoliderazgo.</li><li><strong>Abordar el Dolor Profundo:</strong> El dolor interno persistente, particularmente en los isquiotibiales y alrededor del implante, requiere atención continua y adaptación de los ejercicios para manejar la incomodidad mientras se promueve una curación más profunda.</li></ul>` }
     ];
@@ -290,7 +289,7 @@
 
     // --- STATE & DOM ELEMENTS --- //
     // Manages the application's current state (language, selected day) and holds references to HTML elements.
-    // Adjusted currentEntryIndex to account for the new Day 10 entry being the latest non-summary entry.
+    // Adjusted currentEntryIndex to account for the new Day 11 entry being the latest non-summary entry.
     let currentEntryIndex = diaryEntriesBase.length - 2; 
     let currentLanguage = 'en';
     let exerciseChart = null;
@@ -352,7 +351,8 @@
         if (currentLanguage === 'es') {
             if (entry.shortTitle === 'Day 3') title = 'Día 3: Viernes, 30 de Mayo, 2025';
             if (entry.id === 'week-1-summary') title = 'Resumen Semana 1: Días 1 a 7';
-            if (entry.shortTitle === 'Day 10') title = 'Día 10: Viernes, 6 de Junio, 2025'; // Translate Day 10 title
+            if (entry.shortTitle === 'Day 10') title = 'Día 10: Viernes, 6 de Junio, 2025';
+            if (entry.shortTitle === 'Day 11') title = 'Día 11: Sábado, 7 de Junio, 2025'; // Translate Day 11 title
         }
         
         currentDayTitleElement.innerHTML = title; 
@@ -381,10 +381,12 @@
             const button = document.createElement('button');
             let shortTitle = entry.shortTitle;
             if (currentLanguage === 'es') {
-                 if(entry.shortTitle === 'Day 3') shortTitle = 'Día 3';
-                 if(entry.id === 'week-1-summary') shortTitle = 'Semana 1';
-                 // Translate "Day 10" if it exists
-                 if(entry.shortTitle === 'Day 10') shortTitle = 'Día 10';
+                    if(entry.shortTitle === 'Day 3') shortTitle = 'Día 3';
+                    if(entry.id === 'week-1-summary') shortTitle = 'Semana 1';
+                    // Translate day numbers if they exist
+                    if(entry.shortTitle.startsWith('Day')) {
+                       shortTitle = entry.shortTitle.replace('Day', 'Día');
+                    }
             }
             button.textContent = shortTitle;
             button.classList.add('day-selector-button');
@@ -409,11 +411,11 @@
         
         const labels = graphEntries.map(entry => {
              if (currentLanguage === 'es') {
-                 if(entry.shortTitle === 'Day 3') return 'Día 3';
-                 if(entry.shortTitle === 'Day 10') return 'Día 10'; // Added translation for Day 10 in chart
-                 return entry.shortTitle.replace('Day', 'Día');
-            }
-            return entry.shortTitle;
+                 if(entry.shortTitle.startsWith('Day')) {
+                    return entry.shortTitle.replace('Day', 'Día');
+                 }
+             }
+             return entry.shortTitle;
         });
         const setsData = graphEntries.map(entry => entry.exerciseSets * 5);
         const kcalsData = graphEntries.map(entry => entry.moveKcals / 10);
