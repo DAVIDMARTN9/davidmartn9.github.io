@@ -319,6 +319,19 @@
             contentES: `<p>¡El día 14 marcó un punto de inflexión significativo en mi recuperación! Era martes, 10 de junio de 2025, y este día trajo uno de los mayores cambios hasta ahora. Justo el día anterior, me reuní con la Dra. Malgorzata Garner, una de las cirujanas que realizó mi operación. Ella confirmó que estaba absolutamente bien que pusiera peso sobre la pierna afectada, una duda que me había estado rondando por la cabeza. Desde ayer, he estado apoyando peso activamente, y está funcionando notablemente bien. A pesar de algo de dolor, estoy dando pasos pequeños pero seguros, y soy optimista de que veremos una gran mejora en solo un par de días.</p><p>También completé un nuevo y más completo conjunto de ejercicios. Siguiendo rutinas anteriores pero extendiéndolas, realicé un total de **12 ejercicios**, cada uno con una duración aproximada de 15 minutos. Esta rutina ahora incluye los nueve ejercicios de días anteriores, con la adición de **peso muerto** usando una barra (solo 12 kg, centrándome en la forma) y **sentadillas a una pierna**, dirigidas específicamente a los glúteos y muslos para aumentar la fuerza. Para mantener la parte superior de mi cuerpo activa sin gastar demasiada energía, también incorporé algunos otros ejercicios como **flexiones, elevaciones laterales de hombros y curl de bíceps**.</p><p>Moverme con una sola muleta ha aumentado significativamente mi independencia dentro de la casa, permitiéndome gestionar muchas más tareas diarias. Mantengo el ejercicio de forma constante, completando 8 series de 15 minutos cada una, totalizando alrededor de dos horas de actividad dedicada. También fue mi primer día de vuelta al trabajo, donde dediqué una cantidad considerable de tiempo a ponerme al día en mi ordenador.</p><p>Además del trabajo, incluso logré bajar a comprar mi propio almuerzo, ya que mi pareja Eniko estaba trabajando. Fue bueno tener un poco de tiempo al aire libre y sentirme más autosuficiente. El recuento global del día en términos de volumen de ejercicio fue impresionante: **756 kilocalorías quemadas, 130 minutos de ejercicio y 15 horas en las que estuve de pie al menos un minuto**, todo logrado a lo largo de mis ocho series de actividad.</p>`
         },
         {
+            id: "day-15",
+            date: "2025-06-11",
+            title: "Day 15: Wednesday, June 11, 2025",
+            shortTitle: "Day 15",
+            exerciseSets: 8,
+            moveKcals: 762,
+            exerciseMinutes: 124,
+            standHours: 16,
+            walkDistanceKm: 0,
+            contentEN: `<p>Today marks Day 15 of my recovery journey, and it feels like a consistent and positive stride forward. I'm feeling much better overall, and the steady progress is truly encouraging. A significant development is that I'm starting to walk without crutches—more like small, careful steps than a full stride, but I can definitely put a little more weight on my affected leg. There's a lingering feeling in the muscles, almost as if they lack the full strength to bear my weight, but this is gradually improving.</p><p>My mobility across all parts of my body is fantastic, notably better than it was three or four days ago. I can now turn in bed with much more ease and control, a testament to the muscles regaining their strength and supporting my leg more effectively.</p><p>I continued diligently with my workouts today, completing **eight sets** of 15 minutes each, focusing on a selection of **12 exercises**. This rigorous routine resulted in a total move of **762 kilocalories burned** and **124 minutes of dedicated exercising**. Furthermore, I ensured that for **16 hours** of the day, I was standing up and walking for at least a minute each hour, maintaining consistent movement.</p><p>One of the key elements now is balancing my recovery with the start of my work. I've begun working around five to six hours a day, and the challenge is to maintain the day's structure: ensuring enough time for the two hours of exercise (eight sets of 15 minutes each), having sufficient time to move around, and simultaneously focusing on my job and getting tasks done. There's a lot to do, both personally and professionally.</p><p>Overall, my feelings are really good. I believe that by the end of this week, which is just a couple of days away, I'll be in a much better transition period. I'm even planning to remove the wound cover in just two days. This feels like another significant step towards full recovery.</p>`,
+            contentES: `<p>Hoy marca el Día 15 de mi viaje de recuperación, y se siente como un paso adelante consistente y positivo. En general, me siento mucho mejor, y el progreso constante es realmente alentador. Un desarrollo significativo es que estoy empezando a caminar sin muletas—más como pasos pequeños y cuidadosos que como una zancada completa, pero definitivamente puedo poner un poco más de peso en mi pierna afectada. Hay una sensación persistente en los músculos, casi como si les faltara la fuerza total para soportar mi peso, pero esto está mejorando gradualmente.</p><p>Mi movilidad en todas las partes de mi cuerpo es fantástica, notablemente mejor de lo que estaba hace tres o cuatro días. Ahora puedo girar en la cama con mucha más facilidad y control, lo que demuestra que los músculos están recuperando su fuerza y apoyando mi pierna de manera más efectiva.</p><p>Continué diligentemente con mis entrenamientos hoy, completando **ocho series** de 15 minutos cada una, centrándome en una selección de **12 ejercicios**. Esta rigurosa rutina resultó en un total de **762 kilocalorías quemadas** y **124 minutos de ejercicio dedicado**. Además, me aseguré de que durante **16 horas** del día, estuve de pie y caminando al menos un minuto cada hora, manteniendo un movimiento constante.</p><p>Uno de los elementos clave ahora es equilibrar mi recuperación con el inicio de mi trabajo. He empezado a trabajar alrededor de cinco a seis horas al día, y el desafío es mantener la estructura del día: asegurarme de tener suficiente tiempo para las dos horas de ejercicio (ocho series de 15 minutos cada una), tener tiempo suficiente para moverme y, al mismo tiempo, concentrarme en mi trabajo y terminar las tareas. Hay mucho por hacer, tanto a nivel personal como profesional.</p><p>En general, mis sensaciones son realmente buenas. Creo que para finales de esta semana, que está a solo un par de días, estaré en un período de transición mucho mejor. Incluso estoy planeando quitar la cubierta de la herida en solo dos días. Esto se siente como otro paso significativo hacia la recuperación total.</p>`
+        },
+        {
             id: "week-2-summary",
             date: "2025-06-10",
             title: "Week 2 Summary: Days 8 to 14",
@@ -381,7 +394,6 @@
             updateExerciseDetails();
         }
     }
-
     /**
      * Displays the currently selected diary entry and updates navigation state.
      */
@@ -398,6 +410,7 @@
             if (entry.shortTitle === 'Day 12') title = 'Día 12: Domingo, 8 de Junio, 2025';
             if (entry.shortTitle === 'Day 13') title = 'Día 13: Lunes, 9 de Junio, 2025';
             if (entry.shortTitle === 'Day 14') title = 'Día 14: Martes, 10 de Junio, 2025'; // New translation
+            if (entry.shortTitle === 'Day 15') title = 'Día 15: Miércoles, 11 de Junio, 2025'; // New translation for Day 15
             if (entry.id === 'week-2-summary') title = 'Resumen Semana 2: Días 8 a 14'; // New translation
         }
         currentDayTitleElement.innerHTML = title;
@@ -416,7 +429,6 @@
             updateExerciseDetails();
         }
     }
-
     /**
      * Creates and populates the day selector buttons at the top.
      */
@@ -453,7 +465,6 @@
             daySelectorContainer.appendChild(button);
         });
     }
-
     /**
      * Renders or updates the exercise progress chart.
      */
@@ -543,8 +554,8 @@
                 routineTitle = texts.restDayRoutine;
             } else {
                 routine = currentLanguage === 'en' ? strengthRoutineEN : strengthRoutineES;
-                // For Day 1, Day 12, and Day 14, we show full descriptions. For other strength days, just names.
-                routineTitle = (currentEntry.id === "day-1" || currentEntry.id === "day-12" || currentEntry.id === "day-14") ? texts.exerciseInstructions : texts.sameRoutine;
+                // For Day 1, Day 12, Day 13, Day 14, and Day 15, we show full descriptions. For other strength days, just names.
+                routineTitle = (currentEntry.id === "day-1" || currentEntry.id === "day-12" || currentEntry.id === "day-13" || currentEntry.id === "day-14" || currentEntry.id === "day-15") ? texts.exerciseInstructions : texts.sameRoutine;
             }
 
             const titleItem = document.createElement('li');
@@ -552,16 +563,28 @@
             exerciseListElement.appendChild(titleItem);
 
             // Dynamically add exercises based on the selected day's routine
-            // For Day 1, Day 12, and Day 14, display full descriptions. For other strength days, just names.
-            if (currentEntry.id === "day-12" || currentEntry.id === "day-1" || currentEntry.id === "day-13" || currentEntry.id === "day-14" || currentEntry.isRestDay) {
-                // For Day 13, show 9 exercises
-                const exercisesToDisplay = (currentEntry.id === "day-13") ? routine.slice(0, 9) : routine;
+            // For Day 13, show 9 exercises. For Day 14 and Day 15, show 12 exercises. For Day 1 and Day 12, show the full routine.
+            if (currentEntry.id === "day-13") {
+                const exercisesToDisplay = routine.slice(0, 9);
                 exercisesToDisplay.forEach(exercise => {
                     const listItem = document.createElement('li');
                     listItem.innerHTML = `<strong>${exercise.name}:</strong> ${exercise.desc}`;
                     exerciseListElement.appendChild(listItem);
                 });
-            } else {
+            } else if (currentEntry.id === "day-14" || currentEntry.id === "day-15") {
+                 const exercisesToDisplay = routine.slice(0, 12); // Show first 12 exercises for Day 14 and 15
+                 exercisesToDisplay.forEach(exercise => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<strong>${exercise.name}:</strong> ${exercise.desc}`;
+                    exerciseListElement.appendChild(listItem);
+                });
+            } else if (currentEntry.id === "day-1" || currentEntry.id === "day-12" || currentEntry.isRestDay) {
+                routine.forEach(exercise => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<strong>${exercise.name}:</strong> ${exercise.desc}`;
+                    exerciseListElement.appendChild(listItem);
+                });
+            } else { // For other days, just list names
                 routine.forEach(exercise => {
                     const listItem = document.createElement('li');
                     listItem.innerHTML = `<strong>${exercise.name}</strong>`;
@@ -621,9 +644,9 @@
 
     // Initial load
     document.addEventListener('DOMContentLoaded', () => {
-        // Set currentEntryIndex to the latest entry (Week 2 Summary) when the page loads
-        currentEntryIndex = diaryEntriesBase.findIndex(entry => entry.id === "week-2-summary");
-        if (currentEntryIndex === -1) { // Fallback if Week 2 Summary not found for some reason
+        // Set currentEntryIndex to Day 15 when the page loads
+        currentEntryIndex = diaryEntriesBase.findIndex(entry => entry.id === "day-15");
+        if (currentEntryIndex === -1) { // Fallback if Day 15 not found for some reason
             currentEntryIndex = diaryEntriesBase.length - 1;
         }
 
