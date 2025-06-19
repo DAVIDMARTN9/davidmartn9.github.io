@@ -192,6 +192,11 @@
             <div class="chart-container">
                 <canvas id="exerciseProgressChart"></canvas>
             </div>
+            <h3 id="weekly-progress-title" class="text-3xl font-bold text-gray-800 mb-5 text-center mt-10">Weekly Volume Comparison</h3>
+            <p id="weekly-progress-description" class="text-gray-600 mb-8 text-center text-lg">Compare your total weekly exercise volumes to visualize consistent growth and recovery milestones.</p>
+            <div class="chart-container">
+                <canvas id="weeklyComparisonChart"></canvas>
+            </div>
             <div id="exercise-details-card" class="exercise-details-card prose lg:prose-xl max-w-none mt-8">
                 <h4 id="exercise-details-title" class="text-2xl font-semibold text-gray-700 mb-5">Daily Exercise Breakdown</h4>
                 <div id="current-day-stats" class="text-lg text-gray-800 mb-6 space-y-2"></div>
@@ -341,7 +346,7 @@
             standHours: 15,
             walkDistanceKm: 0,
             contentEN: `<p>Day 14 marked a significant turning point in my recovery! It was Tuesday, June 10, 2025, and this day brought one of the biggest changes yet. Just the day before, I met with Dr. Malgorzata Garner, one of the surgeons who performed my operation. She confirmed that it was absolutely fine for me to put weight on the affected leg, a doubt that had been lingering in my mind. Since yesterday, I've been actively bearing weight, and it's working remarkably well. Despite some pain, I’m taking confident baby steps, and I'm optimistic we'll see a big improvement in just a couple of days.</p><p>I also completed a new, more comprehensive set of exercises. Following previous routines but extending them, I performed a total of <strong>12 exercises</strong>, each lasting about 15 minutes. This routine now includes the nine exercises from previous days, with the addition of **dead weight lifts** using a bar (just 12 kg, focusing on form) and **single-leg squats**, specifically targeting the glutes and thighs for increased strength. To keep my upper body active without expending too much energy, I also incorporated a few other exercises like **push-ups, shoulder flies, and biceps curls**.</p><p>Moving around with only one crutch has significantly increased my independence within the house, allowing me to manage many more daily tasks. I maintained consistent exercise, completing 8 sets of 15 minutes each, totaling around two hours of dedicated activity. It was also my first day back to work, where I dedicated a considerable amount of time to catching up on my computer.</p><p>Apart from work, I even managed to go downstairs to buy my own lunch, as my partner Eniko was working. It was good to have a little time outdoors and feel more self-reliant. The global count for the day in terms of volume of exercise was impressive: **756 kilocalories burned, 130 minutes of exercise, and 15 hours where I was up for at least one minute**, all achieved across my eight sets of activity.</p>`,
-            contentES: `<p>¡El día 14 marcó un punto de inflexión significativo en mi recuperación! Era martes, 10 de junio de 2025, y este día trajo uno de los mayores cambios hasta ahora. Justo el día anterior, me reuní con la Dra. Malgorzata Garner, una de las cirujanas que realizó mi operación. Ella confirmó que estaba absolutamente bien que pusiera peso sobre la pierna afectada, una duda que me había estado rondando por la cabeza. Desde ayer, he estado apoyando peso activamente, y está funcionando notablemente bien. A pesar de algo de dolor, estoy dando pasos pequeños pero seguros, y soy optimista de que veremos una gran mejora en solo un par de días.</p><p>También completé un nuevo y más completo conjunto de ejercicios. Siguiendo rutinas anteriores pero extendiéndolas, realicé un total de **12 ejercicios**, cada uno con una duración aproximada de 15 minutos. Esta rutina ahora incluye los nueve ejercicios de días anteriores, con la adición de **peso muerto** usando una barra (solo 12 kg, centrándome en la forma) y **sentadillas a una pierna**, dirigidas específicamente a los glúteos y muslos para aumentar la fuerza. Para mantener la parte superior de mi cuerpo activa sin gastar demasiada energía, también incorporé algunos otros ejercicios como **flexiones, elevaciones laterales de hombros y curl de bíceps**.</p><p>Moverme con una sola muleta ha aumentado significativamente mi independencia dentro de la casa, permitiéndome gestionar muchas más tareas diarias. Mantengo el ejercicio de forma constante, completando 8 series de 15 minutos cada una, totalizando alrededor de dos horas de actividad dedicada. También fue mi primer día de vuelta al trabajo, donde dediqué una considerable cantidad de tiempo a ponerme al día en mi ordenador.</p><p>Además del trabajo, incluso logré bajar a comprar mi propio almuerzo, ya que mi pareja Eniko estaba trabajando. Fue bueno tener un poco de tiempo al aire libre y sentirme más autosuficiente. El recuento global del día en términos de volumen de ejercicio fue impresionante: **756 kilocalorías quemadas, 130 minutos de ejercicio y 15 horas en las que estuve de pie al menos un minuto**, todo logrado a lo largo de mis ocho series de actividad.</p>`
+            contentES: `<p>¡El día 14 marcó un punto de inflexión significativo en mi recuperación! Era martes, 10 de junio de 2025, y este día trajo uno de los mayores cambios hasta ahora. Justo el día anterior, me reuní con la Dra. Malgorzata Garner, una de las cirujanas que realizó mi operación. Ella confirmó que estaba absolutamente bien que pusiera peso sobre la pierna afectada, una duda que me había estado rondando por la cabeza. Desde ayer, he estado apoyando peso activamente, y está funcionando notablemente bien. A pesar de algo de dolor, estoy dando pasos pequeños pero seguros, y soy optimista de que veremos una gran mejora en solo un par de días.</p><p>También completé un nuevo y más completo conjunto de ejercicios. Siguiendo rutinas anteriores pero extendiéndolas, realicé un total de **12 ejercicios**, cada uno con una duración aproximada de 15 minutos. Esta rutina ahora incluye los nueve ejercicios de días anteriores, con la adición de **peso muerto** usando una barra (solo 12 kg, centrándome en la forma) y **sentadillas a una pierna**, dirigidas específicamente a los glúteos y muslos para aumentar la fuerza. Para mantener la parte superior de mi cuerpo activa sin gastar demasiada energía, también incorporé algunos otros ejercicios como **flexiones, elevaciones laterales de hombros y curl de bíceps**.</p><p>Moverme con una sola muleta ha aumentado significativamente mi independencia dentro de la casa, permitiéndome gestionar muchas más tareas diarias. Mantengo el ejercicio de forma constante, completando 8 series de 15 minutos cada una, totalizando alrededor de dos horas de actividad dedicada. También fue mi primer día de vuelta al trabajo, donde dediqué una considerable cantidad de tiempo a ponerme al día en mi ordenador.</p><p>Además del trabajo, incluso logré bajar a comprar mi propio almuerzo, as my partner Eniko was working. It was good to have a little time outdoors and feel more self-reliant. The global count for the day in terms of volume of exercise was impressive: **756 kilocalories burned, 130 minutes of exercise, and 15 hours where I was up for at least one minute**, all achieved across my eight sets of activity.</p>`
         },
         {
             id: "week-2-summary",
@@ -404,7 +409,6 @@
             contentEN: `<p>Today marks **Day 18** of my recovery, and it was another day of fantastic progress! The total amount of movement recorded was **811 kilocalories**, with **137 minutes** of dedicated exercise and **19 hours** of standing time.</p><p>I completed **seven sets of 12 exercises** and even managed to do a walk to the shops, covering around **1.5 kilometers**. The day went very well. Once again, I didn't use my crutches the whole day, only for the walk out to the shopping area. At home, I was completely without crutches. As I'm putting more weight into my routine with the exercises, I'm really starting to see an improvement in the muscle; it's able to hold everything much better.</p><p>Because of the increased exercise and the walk, I finished up the day way, way more tired, so I had to go to bed early. I decided to take paracetamol and some morphine, just to ensure a good night's sleep, even though I had been without morphine for a couple of days. I think it was a good decision because I slept well, and it really helped with recovery. Overall, it was another great day in the progress. I'm seeing that every day the improvement is faster, so that's great news!</p>`,
             contentES: `<p>¡Hoy marca el **Día 18** de mi recuperación, y fue otro día de progreso fantástico! El movimiento total registrado fue de **811 kilocalorías**, con **137 minutos** de ejercicio dedicado y **19 horas** de pie.</p><p>Completé **siete series de 12 ejercicios** e incluso logré ir a las tiendas caminando, cubriendo alrededor de **1.5 kilómetros**. El día fue muy bien. Una vez más, no utilicé muletas en todo el día, solo para la caminata de compras. En casa, estuve completamente sin muletas. A medida que estoy poniendo más peso en mi rutina de ejercicios, realmente estoy empezando a ver una mejora en el músculo; es capaz de sostener todo mucho mejor.</p><p>Debido al aumento del ejercicio y la caminata, terminé el día mucho, mucho más cansado, por lo que tuve que acostarme temprano. Decidí tomar paracetamol y un poco de morfina, solo para asegurar una buena noche de sueño, a pesar de que había estado sin morfina durante un par de días. Creo que fue una buena decisión porque dormí bien, y realmente ayudó a recuperarme. En general, fue otro gran día de progreso. Estoy viendo que cada día la mejora es más rápida, ¡así que son excelentes noticias!</p>`
         },
-        // NEW ENTRY FOR DAY 19
         {
             id: "day-19",
             date: "2025-06-15",
@@ -416,19 +420,125 @@
             standHours: 15,
             walkDistanceKm: 0,
             contentEN: `<p>Today is **Day 19** of my recovery, and it was another truly positive day. I woke up in great shape after a very good night of rest, feeling quite refreshed and ready for the day's activities. I carried out most of my exercise sets in the morning, only doing one set after 5 PM, which meant the bulk of my activity was concentrated earlier in the day.</p><p>Overall, I'm feeling quite well. I'm still limping a bit when walking without crutches, but I did go for a short walk outside today. When I use the crutch, it definitely helps a lot, and my walking feels quite agile. The most encouraging news is regarding pain: I experienced **very little to no pain** throughout the entire day, and even at night, I'm managing without morphine, relying only on paracetamol. This is a significant positive step!</p><p>There's a slight, lingering pain in my muscles, but it feels like they are just finishing their recovery, so it's nothing to worry about. Something I want to highlight is that I jumped on the scale today, something I haven't done since before the operation, and I weighed in at **66 kilos**. This is very low for me, and I'm not entirely sure why. It might be because the new prosthesis is lighter than my previous bones, but I also believe I've lost muscle in both my leg and my upper body. I don't think there's any other major cause for this weight loss. But once again, overall, a really positive day. I'm feeling quite good, and I truly believe everything is moving in the right direction.</p>`,
-            contentES: `<p>Hoy es el **Día 19** de mi recuperación, y fue otro día verdaderamente positivo. Me desperté en muy buena forma después de una excelente noche de descanso, sintiéndome bastante renovado y listo para las actividades del día. Realicé la mayoría de mis series de ejercicios por la mañana, haciendo solo una serie después de las 5 PM, lo que significa que la mayor parte de mi actividad se concentró más temprano en el día.</p><p>En general, me siento bastante bien. Todavía cojeo un poco al caminar sin muletas, pero hoy salí a dar un paseo corto. Cuando uso la muleta, definitivamente ayuda mucho y mi forma de andar se siente bastante ágil. La noticia más alentadora es la del dolor: experimenté **muy poco o ningún dolor** durante todo el día, e incluso por la noche, me las estoy arreglando sin morfina, confiando solo en el paracetamol. ¡Este es un paso positivo significativo!</p><p>Hay un ligero dolor persistente en mis músculos, pero parece que están terminando su recuperación, así que no es nada de qué preocuparse. Algo que quiero destacar es que hoy me subí a la báscula, algo que no había hecho desde antes de la operación, y pesé **66 kilos**. Esto es muy bajo para mí, y no estoy del todo seguro de la razón. Podría ser porque la nueva prótesis es más ligera que mis huesos anteriores, pero también creo que he perdido músculo tanto en la pierna como en la parte superior del cuerpo. No creo que haya otra causa importante para esta pérdida de peso. Pero, una vez más, en general, un día realmente positivo. Me siento bastante bien y realmente creo que todo va en la dirección correcta.</p>`
+            contentES: `<p>Hoy es el **Día 19** de mi recuperación, y fue otro día verdaderamente positivo. Me desperté en muy buena forma después de una excelente noche de descanso, sintiéndome bastante renovado y listo para las actividades del día. Realicé la mayoría de mis series de ejercicios por la mañana, haciendo solo una serie después de las 5 PM, lo que significa que la mayor parte de mi actividad se concentró más temprano en el día.</p><p>En general, me siento bastante bien. Todavía cojeo un poco al caminar sin muletas, pero hoy salí a dar un paseo corto. Cuando uso la muleta, definitivamente ayuda mucho y mi forma de andar se siente bastante ágil. La noticia más alentadora es la del dolor: experimenté **muy poco o ningún dolor** durante todo el día, e incluso por la noche, me las estoy arreglando sin morfina, confiando solo en el paracetamol. ¡Este es un paso positivo significativo!</p><p>Hay un ligero dolor persistente en mis músculos, pero parece que están terminando su recuperación, así que no es nada de qué preocuparse. Algo que quiero destacar es que hoy me subí a la báscula, algo que no había hecho desde antes de la operación, y pesé **66 kilos**. Esto es muy bajo para mí, y no estoy del todo seguro de la razón. Podría ser porque la nueva prótesis es más ligera que mis huesos anteriores, pero también creo que he perdido músculo tanto en la pierna como en la parte superior del cuerpo. No creo que haya otra causa importante para esta pérdida de peso. Pero una vez más, en general, un día realmente positivo. Me siento bastante bien y realmente creo que todo va en la dirección correcta.</p>`
+        },
+        {
+            id: "day-20",
+            date: "2025-06-16",
+            title: "Day 20: Monday, June 16, 2025 – Back on the Bike!",
+            shortTitle: "Day 20",
+            exerciseSets: 6,
+            moveKcals: 692,
+            exerciseMinutes: 84,
+            standHours: 14,
+            walkDistanceKm: 0,
+            contentEN: `<p>Today, **Day 20** of my recovery, was a monumental and emotional day as I finally returned to the bike! I spent **20 minutes on the Turbo Trainer** for the first time, focusing purely on the movement without any resistance. So far, so good – it was incredibly moving to see the improved range of motion and my ability to reach the handlebars more comfortably. It truly felt like a solid day in terms of exercise.</p><p>My overall "move" was **692 kilocalories**, with **1 hour and 24 minutes of exercising**, and I managed to stand for at least one minute during **14 hours** of the day. This also marked my first full day back at work, which made fitting in all these exercises quite a juggle. Despite the busy schedule, I think I managed quite well, and it feels great to be back. There's a lot to catch up on, but I'm happy to be back in the swing of things.</p><p>At home, things are also improving significantly; I can walk much more easily now. While it's still not perfect and I still have a slight limp, I'm actively trying to identify which muscles are contributing to this. However, I'm completely autonomous within the house, which is a huge relief. I completed **6 sets of the 12 exercises** I've been diligently doing every day. Overall, a really positive and encouraging Day 20.</p>`,
+            contentES: `<p>Hoy, **Día 20** de mi recuperación, fue un día monumental y emotivo, ¡ya que finalmente volví a la bicicleta! Pasé **20 minutos en el Turbo Trainer** por primera vez, centrándome puramente en el movimiento sin ninguna resistencia. Por ahora, todo va bien; fue increíblemente emocionante ver la mejora en el rango de movimiento y mi capacidad para alcanzar el manillar con más comodidad. Realmente se sintió como un día sólido en cuanto a ejercicio.</p><p>Mi "movimiento" total fue de **692 kilocalorías**, con **1 hora y 24 minutos de ejercicio**, y logré mantenerme de pie al menos un minuto durante **14 horas** del día. Esto también marcó mi primer día completo de regreso al trabajo, lo que hizo que encajar todos estos ejercicios fuera todo un desafío. A pesar del horario apretado, creo que lo manejé bastante bien, y se siente genial estar de vuelta. Hay mucho que ponerse al día, pero estoy feliz de volver a la rutina.</p><p>En casa, las cosas también están mejorando significativamente; ahora puedo caminar con mucha más facilidad. Aunque todavía no es perfecto y sigo cojeando un poco, estoy tratando activamente de identificar qué músculos están contribuyendo a esto. Sin embargo, soy completamente autónomo dentro de casa, lo cual es un gran alivio. Completé **6 series de los 12 ejercicios** que he estado haciendo diligentemente todos los días. En general, un Día 20 realmente positivo y alentador.</p>`
+        },
+        {
+            id: "day-21",
+            date: "2025-06-17",
+            title: "Day 21: Tuesday, June 17, 2025 – Consistent Progress",
+            shortTitle: "Day 21",
+            exerciseSets: 6,
+            moveKcals: 772,
+            exerciseMinutes: 141,
+            standHours: 13,
+            walkDistanceKm: 0,
+            contentEN: `<p>Today, **Day 21**, mirrored yesterday's positive momentum, maintaining a steady and focused approach to my recovery. I once again completed **6 sets of exercises**, sticking to the same 12-exercise routine. This consistent rhythm is proving crucial for building both muscle strength and flexibility, as I simultaneously work on stretching each muscle group.</p><p>My overall volume for the day was robust: **772 kilocalories burned**, with an impressive **141 minutes of exercise**, and **13 hours** where I stood for at least one minute per hour. A highlight was jumping back on the Turbo Trainer for my Zwift session, extending my time to **30 minutes**. It continues to improve with no pain, which is incredibly encouraging and a testament to the gradual progress.</p><p>Again, it was a full day of work, which meant my schedule was packed. Apart from work and my dedicated exercise routine, there wasn't much time for anything else. Nevertheless, I'm feeling good about the balance I'm striking and the consistent improvements I'm seeing.</p>`,
+            contentES: `<p>Hoy, **Día 21**, reflejó el impulso positivo de ayer, manteniendo un enfoque constante y centrado en mi recuperación. Una vez más, completé **6 series de ejercicios**, siguiendo la misma rutina de 12 ejercicios. Este ritmo constante está demostrando ser crucial para desarrollar tanto la fuerza muscular como la flexibilidad, ya que trabajo simultáneamente en el estiramiento de cada grupo muscular.</p><p>Mi volumen general para el día fue robusto: **772 kilocalorías quemadas**, con unos impresionantes **141 minutos de ejercicio**, y **13 horas** en las que estuve de pie al menos un minuto por hora. Un punto destacado fue volver a subirme al Turbo Trainer para mi sesión de Zwift, extendiendo mi tiempo a **30 minutos**. Sigue mejorando sin dolor, lo cual es increíblemente alentador y un testimonio del progreso gradual.</p><p>De nuevo, fue un día completo de trabajo, lo que significó que mi horario estuvo muy apretado. Aparte del trabajo y mi rutina de ejercicios dedicada, no hubo mucho tiempo para nada más. Sin embargo, me siento bien con el equilibrio que estoy logrando y las mejoras constantes que estoy viendo.</p>`
+        },
+        {
+            id: "day-22",
+            date: "2025-06-18",
+            title: "Day 22: Wednesday, June 18, 2025 – Pushing the Limits",
+            shortTitle: "Day 22",
+            exerciseSets: 7,
+            moveKcals: 917,
+            exerciseMinutes: 167,
+            standHours: 13,
+            walkDistanceKm: 0,
+            contentEN: `<p>Today, **Day 22**, demonstrated a notable increase in my activity levels, indicating a steady push towards greater recovery. My volumes were impressive: **917 kilocalories burned**, **167 minutes of exercise**, and **13 hours** of standing time. I successfully completed **7 sets** of my familiar 12-exercise routine, reinforcing consistency and strength building.</p><p>Another **30 minutes on the Turbo Trainer with Zwift** is becoming a comfortable and effective part of my daily routine, and I continue to feel quite good overall during these sessions. To support my increased activity and muscle recovery, I took a small amount of **creatine**. I've read it can be beneficial when the body is becoming more active, so I'm hoping this supplement will provide an extra boost.</p><p>The day felt productive and filled with purpose, with a strong focus on both my professional tasks and the crucial physical rehabilitation. The journey continues, and each day brings a new sense of capability.</p>`,
+            contentES: `<p>Hoy, **Día 22**, demostró un notable aumento en mis niveles de actividad, indicando un empuje constante hacia una mayor recuperación. Mis volúmenes fueron impresionantes: **917 kilocalorías quemadas**, **167 minutos de ejercicio**, y **13 horas** de tiempo de pie. Completé con éxito **7 series** de mi familiar rutina de 12 ejercicios, reforzando la consistencia y el desarrollo de la fuerza.</p><p>Otros **30 minutos en el Turbo Trainer con Zwift** se están convirtiendo en una parte cómoda y efectiva de mi rutina diaria, y sigo sintiéndome bastante bien en general durante estas sesiones. Para apoyar mi aumento de actividad y la recuperación muscular, tomé una pequeña cantidad de **creatina**. He leído que puede ser beneficiosa cuando el cuerpo se vuelve más activo, así que espero que este suplemento proporcione un impulso extra.</p><p>El día se sintió productivo y lleno de propósito, con un fuerte enfoque tanto en mis tareas profesionales como en la crucial rehabilitación física. El viaje continúa, y cada día trae una nueva sensación de capacidad.</p>`
+        },
+        {
+            id: "week-3-summary",
+            date: "2025-06-18",
+            title: "Week 3 Summary: Days 15 to 22",
+            shortTitle: "Week 3",
+            isSummary: true,
+            contentEN: `<h3 class="text-2xl font-bold text-gray-800 mb-4">Looking Back at Week 3: Gaining Momentum and Autonomy</h3><p>Week 3 has truly been a period of accelerated progress, marked by a palpable shift towards greater independence and a deeper re-engagement with physical activity. The cautious steps of previous weeks have transformed into confident strides, allowing for more fluid movement and a return to activities that felt distant just a short while ago. This week highlighted the power of consistent daily effort and the profound impact of overcoming psychological barriers.</p><p>Significant milestones include walking without crutches, the emotional return to cycling on the Turbo Trainer, and a sustained increase in overall exercise volume and intensity. While a slight limp persists, indicating ongoing muscle re-education, the reduction in pain and reliance on strong painkillers has been a huge victory. The focus has shifted from mere recovery to active rehabilitation and reintegration into a more normal routine, including work.</p><h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Victories: What Propelled Me Forward</h4><ul class="list-disc ml-6"><li><strong>Crutch-Free Mobility:</strong> Achieving the ability to walk without crutches, significantly enhancing daily autonomy and confidence both indoors and for short outdoor ventures.</li><li><strong>Return to Cycling:</strong> Successfully re-introduced cycling on the Turbo Trainer (20-30 minutes daily), a crucial step in regaining full range of motion and cardiovascular fitness without impact.</li><li><strong>Increased Exercise Volume & Intensity:</strong> Maintained high levels of exercise (averaging 6-8 sets of 12 exercises), with a notable increase in total minutes and calories burned, indicating improved endurance and strength.</li><li><strong>Pain Management Success:</strong> Significantly reduced reliance on morphine, managing pain effectively with paracetamol, leading to improved sleep quality and overall comfort.</li><li><strong>Seamless Work Integration:</strong> Successfully balanced rehabilitation efforts with a return to part-time work, demonstrating improved stamina and ability to manage multiple demands.</li><li><strong>Enhanced Body Awareness:</strong> Actively identifying muscles contributing to lingering limp, showcasing a deeper understanding and proactive approach to targeted recovery.</li><li><strong>Creatine Supplementation:</strong> Introduced creatine to support increased activity levels and muscle recovery, a forward-thinking approach to optimizing physical performance.</li><li><strong>Sustained Healthy Habits:</strong> Continued adherence to a balanced diet and consistent movement, providing the necessary fuel and flexibility for ongoing progress.</li></ul><h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Insights & Opportunities: What I'd Refine Next Time</h4><ul class="list-disc ml-6"><li><strong>Targeted Limp Correction:</strong> A more focused and consistent effort on identifying and strengthening the specific muscles causing the limp could accelerate a full return to normal gait.</li><li><strong>Managing Work-Life-Recovery Balance:</strong> As work demands increase, proactively scheduling dedicated recovery time to prevent overexertion and ensure optimal healing remains paramount.</li><li><strong>Gradual Weight Gain:</strong> Given the unexpected weight loss, a more deliberate nutritional strategy to regain healthy muscle mass (while maintaining leanness) could be beneficial.</li><li><strong>Proactive Muscle Recovery:</strong> Exploring additional techniques for muscle recovery (e.g., more targeted massage, foam rolling) to address any persistent soreness from increased activity.</li><li><strong>Psychological Patience:</strong> Continued patience and acceptance that full recovery is a gradual process, celebrating small victories while remaining realistic about the journey ahead.</li></ul>`,
+            contentES: `<h3 class="text-2xl font-bold text-gray-800 mb-4">Mirando Atrás a la Semana 3: Ganando Impulso y Autonomía</h3><p>La Semana 3 ha sido verdaderamente un período de progreso acelerado, marcado por un cambio palpable hacia una mayor independencia y un reencuentro más profundo con la actividad física. Los pasos cautelosos de semanas anteriores se han transformado en zancadas seguras, permitiendo un movimiento más fluido y un regreso a actividades que parecían lejanas hace poco tiempo. Esta semana destacó el poder del esfuerzo diario constante y el profundo impacto de superar las barreras psicológicas.</p><p>Hitos significativos incluyen caminar sin muletas, el emotivo regreso al ciclismo en el Turbo Trainer y un aumento sostenido en el volumen y la intensidad general del ejercicio. Si bien persiste una ligera cojera, lo que indica una reeducación muscular continua, la reducción del dolor y la dependencia de analgésicos fuertes ha sido una gran victoria. El enfoque ha pasado de la mera recuperación a la rehabilitación activa y la reintegración en una rutina más normal, incluido el trabajo.</p><h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Victorias: ¡Lo que me Impulsó Hacia Adelante!</h4><ul class="list-disc ml-6"><li><strong>Movilidad Sin Muletas:</strong> Lograr la capacidad de caminar sin muletas, mejorando significativamente la autonomía diaria y la confianza tanto en interiores como para salidas cortas al exterior.</li><li><strong>Regreso al Ciclismo:</strong> Se reintrodujo con éxito el ciclismo en el Turbo Trainer (20-30 minutos diarios), un paso crucial para recuperar el rango completo de movimiento y la forma cardiovascular sin impacto.</li><li><strong>Aumento del Volumen e Intensidad del Ejercicio:</strong> Mantenimiento de altos niveles de ejercicio (promedio de 6-8 series de 12 ejercicios), con un notable aumento en el total de minutos y calorías quemadas, lo que indica una mejora de la resistencia y la fuerza.</li><li><strong>Éxito en el Control del Dolor:</strong> Reducción significativa de la dependencia de la morfina, controlando el dolor eficazmente con paracetamol, lo que llevó a una mejor calidad del sueño y un confort general.</li><li><strong>Integración Fluida del Trabajo:</strong> Se logró equilibrar con éxito los esfuerzos de rehabilitación con el regreso al trabajo a tiempo parcial, demostrando una mejora de la resistencia y la capacidad para gestionar múltiples demandas.</li><li><strong>Mayor Conciencia Corporal:</strong> Identificación activa de los músculos que contribuyen a la cojera persistente, mostrando una comprensión más profunda y un enfoque proactivo hacia una recuperación dirigida.</li><li><strong>Suplementación con Creatina:</strong> Introducción de creatina para apoyar el aumento de los niveles de actividad y la recuperación muscular, un enfoque con visión de futuro para optimizar el rendimiento físico.</li><li><strong>Hábitos Saludables Sostenidos:</strong> Adherencia continua a una dieta equilibrada y un movimiento constante, proporcionando el combustible y la flexibilidad necesarios para el progreso continuo.</li></ul><h4 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Aprendizajes y Oportunidades: ¡Lo que Mejoraría la Próxima Vez!</h4><ul class="list-disc ml-6"><li><strong>Corrección Dirigida de la Cojera:</strong> Un esfuerzo más enfocado y consistente en identificar y fortalecer los músculos específicos que causan la cojera podría acelerar un regreso completo a la marcha normal.</li><li><strong>Manejo del Equilibrio Trabajo-Vida-Recuperación:</strong> A medida que aumentan las demandas laborales, programar de forma proactiva tiempo de recuperación dedicado para evitar el sobreesfuerzo y asegurar una curación óptima sigue siendo primordial.</li><li><strong>Aumento Gradual de Peso:</strong> Dada la pérdida de peso inesperada, una estrategia nutricional más deliberada para recuperar masa muscular saludable (manteniendo la delgadez) podría ser beneficiosa.</li><li><strong>Recuperación Muscular Proactiva:</strong> Explorar técnicas adicionales para la recuperación muscular (por ejemplo, masajes más específicos, uso de rodillo de espuma) para abordar cualquier dolor persistente derivado del aumento de la actividad.</li><li><strong>Paciencia Psicológica:</strong> Paciencia y aceptación continuas de que la recuperación completa es un proceso gradual, celebrando las pequeñas victorias sin dejar de ser realistas sobre el camino por delante.</li></ul>`
         }
     ];
+
     const uiTexts = {
-        en: { mainTitle: "My Hip Replacement Recovery Diary", subtitle: "Navigating recovery, one day at a time. Every step is progress.", prevButton: "Previous Day", nextButton: "Next Day", footer: "&copy; 2025 My Recovery Journey. All rights reserved (for the diarist!).", toggleTo: "🇪🇸 Español", showProgress: "📊 Show Progress", hideProgress: "📊 Hide Progress", progressTitle: "Exercise Progress", progressDescription: "This chart visualizes the number of exercise sets completed each day, tracking your progress since the surgery, and other vital metrics.", chartLabelSets: "Sets Completed", chartLabelKcals: "Move (KCAL)", chartLabelExerciseMinutes: "Exercise (minutes)", chartLabelStandHours: "Stand (hours)", dailyExerciseBreakdown: "Daily Exercise Breakdown", setsCompleted: "Sets Completed:", totalExerciseTime: "Total Exercise Time:", minutes: "minutes", exerciseInstructions: "Exercise Instructions:", sameRoutine: "Same routine as Day 1:", restDayRoutine: "Rest Day Stretching Routine:", noExercises: "No exercises recorded for this day.", walkDistance: "Walk Distance:" },
-        es: { mainTitle: "Mi Diario de Recuperación de Reemplazo de Cadera", subtitle: "Proceso de recuperación. Partido a partido. Cada paso es progreso.", prevButton: "Día Anterior", nextButton: "Día Siguiente", footer: "&copy; 2025 Mi Viaje de Recuperación. Todos los derechos reservados (¡para el diarista!).", toggleTo: "🇬🇧 English", showProgress: "📊 Mostrar Progreso", hideProgress: "📊 Ocultar Progreso", progressTitle: "Progreso de Ejercicios", progressDescription: "Este gráfico visualiza el número de series de ejercicios completadas cada día, ¡siguiendo tu progreso desde la cirugía, y otras métricas vitales!", chartLabelSets: "Series Completadas", chartLabelKcals: "Movimiento (KCAL)", chartLabelExerciseMinutes: "Ejercicio (minutos)", chartLabelStandHours: "De pie (horas)", dailyExerciseBreakdown: "Detalle de Ejercicios Diarios", setsCompleted: "Series Completadas:", totalExerciseTime: "Tiempo Total de Ejercicio:", minutes: "minutos", exerciseInstructions: "Instrucciones de Ejercicio:", sameRoutine: "Misma rutina que el Día 1:", restDayRoutine: "Rutina de Estiramientos (Día de Descanso):", noExercises: "¡No se registraron ejercicios para este día!", walkDistance: "Distancia Caminada:" }
+        en: {
+            mainTitle: "My Hip Replacement Recovery Diary",
+            subtitle: "Navigating recovery, one day at a time. Every step is progress.",
+            prevButton: "Previous Day",
+            nextButton: "Next Day",
+            footer: "&copy; 2025 My Recovery Journey. All rights reserved (for the diarist!).",
+            toggleTo: "🇪🇸 Español",
+            showProgress: "📊 Show Progress",
+            hideProgress: "📊 Hide Progress",
+            progressTitle: "Exercise Progress",
+            progressDescription: "This chart visualizes the number of exercise sets completed each day, tracking your progress since the surgery, and other vital metrics.",
+            weeklyProgressTitle: "Weekly Volume Comparison",
+            weeklyProgressDescription: "Compare your total weekly exercise volumes to visualize consistent growth and recovery milestones.",
+            chartLabelSets: "Sets Completed (x5 for scale)",
+            chartLabelKcals: "Move (KCAL / 10 for scale)",
+            chartLabelExerciseMinutes: "Exercise (minutes)",
+            chartLabelWalkDistance: "Walk Distance (km)",
+            dailyExerciseBreakdown: "Daily Exercise Breakdown",
+            setsCompleted: "Sets Completed:",
+            totalExerciseTime: "Total Exercise Time:",
+            minutes: "minutes",
+            exerciseInstructions: "Exercise Instructions:",
+            sameRoutine: "Same routine as Day 1:",
+            restDayRoutine: "Rest Day Stretching Routine:",
+            noExercises: "No exercises recorded for this day.",
+            walkDistance: "Walk Distance:",
+            dayPrefix: "Day",
+            weekPrefix: "Week"
+        },
+        es: {
+            mainTitle: "Mi Diario de Recuperación de Reemplazo de Cadera",
+            subtitle: "Proceso de recuperación. Partido a partido. Cada paso es progreso.",
+            prevButton: "Día Anterior",
+            nextButton: "Día Siguiente",
+            footer: "&copy; 2025 Mi Viaje de Recuperación. Todos los derechos reservados (¡para el diarista!).",
+            toggleTo: "🇬🇧 English",
+            showProgress: "📊 Mostrar Progreso",
+            hideProgress: "📊 Ocultar Progreso",
+            progressTitle: "Progreso de Ejercicios",
+            progressDescription: "Este gráfico visualiza el número de series de ejercicios completadas cada día, ¡siguiendo tu progreso desde la cirugía, y otras métricas vitales!",
+            weeklyProgressTitle: "Comparación de Volumen Semanal",
+            weeklyProgressDescription: "Compara tus volúmenes totales de ejercicio semanales para visualizar el crecimiento constante y los hitos de recuperación.",
+            chartLabelSets: "Series Completadas (x5 para escala)",
+            chartLabelKcals: "Movimiento (KCAL / 10 para escala)",
+            chartLabelExerciseMinutes: "Ejercicio (minutos)",
+            chartLabelWalkDistance: "Distancia Caminada (km)",
+            dailyExerciseBreakdown: "Detalle de Ejercicios Diarios",
+            setsCompleted: "Series Completadas:",
+            totalExerciseTime: "Tiempo Total de Ejercicio:",
+            minutes: "minutos",
+            exerciseInstructions: "Instrucciones de Ejercicio:",
+            sameRoutine: "Misma rutina que el Día 1:",
+            restDayRoutine: "Rutina de Estiramientos (Día de Descanso):",
+            noExercises: "¡No se registraron ejercicios para este día!",
+            walkDistance: "Distancia Caminada:",
+            dayPrefix: "Día",
+            weekPrefix: "Semana"
+        }
     };
     // --- STATE & DOM ELEMENTS --- //
     // Manages the application's current state (language, selected day) and holds references to HTML elements.
-    // Adjusted currentEntryIndex to account for the new Day 11 entry being the latest non-summary entry.
-    let currentEntryIndex = diaryEntriesBase.length - 1; // Default to the latest entry (Day 18)
+    let currentEntryIndex = diaryEntriesBase.length - 1; // Default to the latest entry
     let currentLanguage = 'en';
     let exerciseChart = null;
+    let weeklyChart = null;
+
     const diaryContentElement = document.getElementById('diary-entry-content');
     const currentDayTitleElement = document.getElementById('current-day-title');
     const prevDayButton = document.getElementById('prev-day-button');
@@ -441,10 +551,13 @@
     const subtitleElement = document.getElementById('subtitle');
     const progressTitleElement = document.getElementById('progress-title');
     const progressDescriptionElement = document.getElementById('progress-description');
+    const weeklyProgressTitleElement = document.getElementById('weekly-progress-title');
+    const weeklyProgressDescriptionElement = document.getElementById('weekly-progress-description');
     const exerciseDetailsTitleElement = document.getElementById('exercise-details-title');
     const currentDayStatsElement = document.getElementById('current-day-stats');
     const exerciseListElement = document.getElementById('exercise-list');
     const footerTextElement = document.getElementById('footer-text');
+
     // --- UI UPDATE FUNCTIONS --- //
     // These functions are responsible for rendering and updating the content on the page.
     /**
@@ -461,17 +574,28 @@
         toggleProgressButton.textContent = progressSection.classList.contains('hidden') ? texts.showProgress : texts.hideProgress;
         progressTitleElement.textContent = texts.progressTitle;
         progressDescriptionElement.textContent = texts.progressDescription;
+        weeklyProgressTitleElement.textContent = texts.weeklyProgressTitle;
+        weeklyProgressDescriptionElement.textContent = texts.weeklyProgressDescription;
         exerciseDetailsTitleElement.textContent = texts.dailyExerciseBreakdown;
+
         if (exerciseChart) {
             exerciseChart.data.datasets[0].label = texts.chartLabelSets;
             exerciseChart.data.datasets[1].label = texts.chartLabelKcals;
             exerciseChart.data.datasets[2].label = texts.chartLabelExerciseMinutes;
             exerciseChart.update('none'); // Update without animation
         }
+        if (weeklyChart) {
+            weeklyChart.data.datasets[0].label = texts.chartLabelKcals;
+            weeklyChart.data.datasets[1].label = texts.chartLabelExerciseMinutes;
+            weeklyChart.data.datasets[2].label = texts.chartLabelStandHours;
+            weeklyChart.update('none');
+        }
+
         if (!progressSection.classList.contains('hidden')) {
             updateExerciseDetails();
         }
     }
+
     /**
      * Displays the currently selected diary entry and updates navigation state.
      */
@@ -479,22 +603,28 @@
         const entry = diaryEntriesBase[currentEntryIndex];
         const content = currentLanguage === 'en' ? entry.contentEN : entry.contentES;
         let title = entry.title;
+
         // Specific translation corrections for titles
         if (currentLanguage === 'es') {
-            if (entry.shortTitle === 'Day 3') title = 'Día 3: Viernes, 30 de Mayo, 2025';
-            if (entry.id === 'week-1-summary') title = 'Resumen Semana 1: Días 1 a 7';
-            if (entry.shortTitle === 'Day 10') title = 'Día 10: Viernes, 6 de Junio, 2025';
-            if (entry.shortTitle === 'Day 11') title = 'Día 11: Sábado, 7 de Junio, 2025';
-            if (entry.shortTitle === 'Day 12') title = 'Día 12: Domingo, 8 de Junio, 2025';
-            if (entry.shortTitle === 'Day 13') title = 'Día 13: Lunes, 9 de Junio, 2025';
-            if (entry.shortTitle === 'Day 14') title = 'Día 14: Martes, 10 de Junio, 2025';
-            if (entry.shortTitle === 'Day 15') title = 'Día 15: Miércoles, 11 de Junio, 2025';
-            if (entry.shortTitle === 'Day 16') title = 'Día 16: Jueves, 12 de Junio, 2025';
-            if (entry.shortTitle === 'Day 17') title = 'Día 17: Viernes, 13 de Junio, 2025';
-            if (entry.shortTitle === 'Day 18') title = 'Día 18: Sábado, 14 de Junio, 2025'; // New translation for Day 18
-            if (entry.shortTitle === 'Day 19') title = 'Día 19: Domingo, 15 de Junio, 2025'; // New translation for Day 19
-            if (entry.id === 'week-2-summary') title = 'Resumen Semana 2: Días 8 a 14';
+            if (entry.shortTitle.startsWith('Day')) {
+                title = entry.title.replace('Day', uiTexts[currentLanguage].dayPrefix).replace('Monday', 'Lunes').replace('Tuesday', 'Martes').replace('Wednesday', 'Miércoles').replace('Thursday', 'Jueves').replace('Friday', 'Viernes').replace('Saturday', 'Sábado').replace('Sunday', 'Domingo');
+                // Special handling for the Day 0 highlight span within the title
+                if (entry.id === "day-0") {
+                    title = title.replace('Surgery Day', '<span class=\'day0-highlight\'>Día de Cirugía</span>');
+                } else if (entry.id === "day-20") {
+                     title = title.replace('Back on the Bike!', '¡De vuelta en la Bicicleta!');
+                } else if (entry.id === "day-21") {
+                    title = title.replace('Consistent Progress', 'Progreso Constante');
+                } else if (entry.id === "day-22") {
+                    title = title.replace('Pushing the Limits', 'Superando los Límites');
+                }
+
+            }
+            if (entry.id === 'week-1-summary') title = uiTexts[currentLanguage].weekPrefix + ' 1: Días 1 a 7';
+            if (entry.id === 'week-2-summary') title = uiTexts[currentLanguage].weekPrefix + ' 2: Días 8 a 14';
+            if (entry.id === 'week-3-summary') title = uiTexts[currentLanguage].weekPrefix + ' 3: Días 15 a 22';
         }
+
         currentDayTitleElement.innerHTML = title;
         diaryContentElement.innerHTML = content;
         prevDayButton.disabled = currentEntryIndex === 0;
@@ -504,19 +634,14 @@
         buttons.forEach(button => button.classList.remove('active'));
         // Find the button that corresponds to the currently displayed entry and activate it
         const currentButton = Array.from(buttons).find(button => {
-            const buttonShortTitle = currentLanguage === 'en' ? diaryEntriesBase[currentEntryIndex].shortTitle : diaryEntriesBase[currentEntryIndex].shortTitle.replace('Day', 'Día');
-            const buttonText = button.textContent;
+            let buttonTextCompare = button.textContent;
+            let entryShortTitleCompare = entry.shortTitle;
 
-            // Handle summary titles explicitly
-            if (diaryEntriesBase[currentEntryIndex].isSummary) {
-                if (diaryEntriesBase[currentEntryIndex].id === 'week-1-summary' && ((currentLanguage === 'en' && buttonText === 'Week 1') || (currentLanguage === 'es' && buttonText === 'Semana 1'))) {
-                    return true;
-                }
-                if (diaryEntriesBase[currentEntryIndex].id === 'week-2-summary' && ((currentLanguage === 'en' && buttonText === 'Week 2') || (currentLanguage === 'es' && buttonText === 'Semana 2'))) {
-                    return true;
-                }
+            if (currentLanguage === 'es') {
+                entryShortTitleCompare = entry.shortTitle.replace('Day', uiTexts[currentLanguage].dayPrefix);
+                entryShortTitleCompare = entryShortTitleCompare.replace('Week', uiTexts[currentLanguage].weekPrefix);
             }
-            return buttonText === buttonShortTitle;
+            return buttonTextCompare === entryShortTitleCompare;
         });
 
         if (currentButton) {
@@ -527,6 +652,7 @@
             updateExerciseDetails();
         }
     }
+
     /**
      * Creates and populates the day selector buttons at the top.
      */
@@ -538,25 +664,24 @@
             diaryEntriesBase.find(entry => entry.id === 'week-1-summary'),
             ...diaryEntriesBase.filter(entry => entry.id.startsWith('day-') && parseInt(entry.id.replace('day-', '')) > 7 && parseInt(entry.id.replace('day-', '')) <= 14), // Days 8 to 14
             diaryEntriesBase.find(entry => entry.id === 'week-2-summary'), // Week 2 summary moved here
-            ...diaryEntriesBase.filter(entry => entry.id.startsWith('day-') && parseInt(entry.id.replace('day-', '')) > 14 && !entry.isSummary) // Day 15 and onwards
+            ...diaryEntriesBase.filter(entry => entry.id.startsWith('day-') && parseInt(entry.id.replace('day-', '')) > 14 && parseInt(entry.id.replace('day-', '')) <= 22), // Day 15 to 22
+            diaryEntriesBase.find(entry => entry.id === 'week-3-summary') // Week 3 summary
         ].filter(Boolean); // Remove any nulls if an entry isn't found
 
         orderedEntries.forEach((entry, index) => {
             const button = document.createElement('button');
             let shortTitle = entry.shortTitle;
             if (currentLanguage === 'es') {
-                if(entry.shortTitle === 'Day 3') shortTitle = 'Día 3';
-                if(entry.id === 'week-1-summary') shortTitle = 'Semana 1';
-                if(entry.id === 'week-2-summary') shortTitle = 'Semana 2'; // Translate Week 2
-                // Translate day numbers if they exist
                 if(entry.shortTitle.startsWith('Day')) {
-                   shortTitle = entry.shortTitle.replace('Day', 'Día');
+                   shortTitle = entry.shortTitle.replace('Day', uiTexts[currentLanguage].dayPrefix);
+                } else if (entry.shortTitle.startsWith('Week')) {
+                    shortTitle = entry.shortTitle.replace('Week', uiTexts[currentLanguage].weekPrefix);
                 }
             }
             button.textContent = shortTitle;
             button.classList.add('day-selector-button');
             if (entry.id === "day-0") button.classList.add('day0-highlight');
-            if (entry.id === "week-1-summary" || entry.id === "week-2-summary") button.classList.add('week-summary-highlight');
+            if (entry.id === "week-1-summary" || entry.id === "week-2-summary" || entry.id === "week-3-summary") button.classList.add('week-summary-highlight');
             button.addEventListener('click', () => {
                 // Find the actual index of the clicked entry in diaryEntriesBase
                 currentEntryIndex = diaryEntriesBase.findIndex(e => e.id === entry.id);
@@ -565,6 +690,7 @@
             daySelectorContainer.appendChild(button);
         });
     }
+
     /**
      * Renders or updates the exercise progress chart.
      */
@@ -574,14 +700,16 @@
         const labels = graphEntries.map(entry => {
              if (currentLanguage === 'es') {
                  if(entry.shortTitle.startsWith('Day')) {
-                    return entry.shortTitle.replace('Day', 'Día');
+                    return entry.shortTitle.replace('Day', uiTexts[currentLanguage].dayPrefix);
                 }
              }
              return entry.shortTitle;
         });
-        const setsData = graphEntries.map(entry => entry.exerciseSets * 5);
+        // Scale sets and kcals for better visualization on the same chart
+        const setsData = graphEntries.map(entry => entry.exerciseSets * 5); // Each set is 5 mins (approx), total mins is already available
         const kcalsData = graphEntries.map(entry => entry.moveKcals / 10);
         const exerciseMinutesData = graphEntries.map(entry => entry.exerciseMinutes);
+        const walkDistanceData = graphEntries.map(entry => entry.walkDistanceKm * 10); // Scale walk distance
 
         if (exerciseChart) {
             exerciseChart.destroy();
@@ -594,7 +722,8 @@
                 datasets: [
                     { label: uiTexts[currentLanguage].chartLabelSets, data: setsData, backgroundColor: '#60a5fa', borderColor: '#3b82f6', borderWidth: 1, yAxisID: 'y_main' },
                     { label: uiTexts[currentLanguage].chartLabelKcals, data: kcalsData, backgroundColor: '#C71585', borderColor: '#8B008B', borderWidth: 1, yAxisID: 'y_main' },
-                    { label: uiTexts[currentLanguage].chartLabelExerciseMinutes, data: exerciseMinutesData, backgroundColor: '#90EE90', borderColor: '#32CD32', borderWidth: 1, yAxisID: 'y_main' }
+                    { label: uiTexts[currentLanguage].chartLabelExerciseMinutes, data: exerciseMinutesData, backgroundColor: '#90EE90', borderColor: '#32CD32', borderWidth: 1, yAxisID: 'y_main' },
+                    { label: uiTexts[currentLanguage].chartLabelWalkDistance, data: walkDistanceData, backgroundColor: '#FFD700', borderColor: '#DAA520', borderWidth: 1, yAxisID: 'y_main' }
                 ]
             },
             options: {
@@ -610,6 +739,8 @@
                                     label += `${context.raw / 5} sets`;
                                 } else if (context.dataset.label === uiTexts[currentLanguage].chartLabelKcals) {
                                     label += `${context.raw * 10} KCAL`;
+                                } else if (context.dataset.label === uiTexts[currentLanguage].chartLabelWalkDistance) {
+                                    label += `${context.raw / 10} km`;
                                 } else {
                                     label += `${context.raw} minutes`;
                                 }
@@ -625,6 +756,83 @@
             }
         });
     }
+
+    /**
+     * Renders or updates the weekly comparison chart.
+     */
+    function renderWeeklyComparisonChart() {
+        const ctx = document.getElementById('weeklyComparisonChart').getContext('2d');
+
+        // Define weekly summary data directly or calculate from diaryEntriesBase
+        // For simplicity, let's hardcode based on pre-calculated totals for now.
+        // Week 1 (Days 1-7): Sets=60, Kcals=3216, Mins=484, Stand=105
+        // Week 2 (Days 8-14): Sets=54, Kcals=4585, Mins=678, Stand=107
+        // Week 3 (Days 15-22): Sets=58, Kcals=6334, Mins=1069, Stand=123
+
+        const weeklyData = [
+            { name: uiTexts[currentLanguage].weekPrefix + ' 1', moveKcals: 3216, exerciseMinutes: 484, standHours: 105 },
+            { name: uiTexts[currentLanguage].weekPrefix + ' 2', moveKcals: 4585, exerciseMinutes: 678, standHours: 107 },
+            { name: uiTexts[currentLanguage].weekPrefix + ' 3', moveKcals: 6334, exerciseMinutes: 1069, standHours: 123 }
+        ];
+
+        const labels = weeklyData.map(week => week.name);
+        const kcalsData = weeklyData.map(week => week.moveKcals);
+        const exerciseMinutesData = weeklyData.map(week => week.exerciseMinutes);
+        const standHoursData = weeklyData.map(week => week.standHours);
+
+        if (weeklyChart) {
+            weeklyChart.destroy();
+        }
+
+        weeklyChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    { label: uiTexts[currentLanguage].chartLabelKcals, data: kcalsData, backgroundColor: '#C71585', borderColor: '#8B008B', borderWidth: 1 },
+                    { label: uiTexts[currentLanguage].chartLabelExerciseMinutes, data: exerciseMinutesData, backgroundColor: '#90EE90', borderColor: '#32CD32', borderWidth: 1 },
+                    { label: uiTexts[currentLanguage].chartLabelStandHours, data: standHoursData, backgroundColor: '#60a5fa', borderColor: '#3b82f6', borderWidth: 1 }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) { label += ': '; }
+                                if (context.dataset.label === uiTexts[currentLanguage].chartLabelKcals) {
+                                    label += `${context.raw} KCAL`;
+                                } else if (context.dataset.label === uiTexts[currentLanguage].chartLabelExerciseMinutes) {
+                                    label += `${context.raw} minutes`;
+                                } else {
+                                    label += `${context.raw} hours`;
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Volume'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+    }
+
     /**
      * Updates the detailed breakdown of daily exercises and stats.
      */
@@ -639,7 +847,7 @@
         currentDayStatsElement.innerHTML = `
             ${texts.setsCompleted} <strong>${currentEntry.exerciseSets}</strong><br>
             ${texts.totalExerciseTime} <strong>${currentEntry.exerciseMinutes} ${texts.minutes}</strong><br>
-            ${texts.chartLabelKcals}: <strong>${currentEntry.moveKcals} KCAL</strong><br>
+            ${texts.chartLabelKcals.replace(' / 10 for scale', '')}: <strong>${currentEntry.moveKcals} KCAL</strong><br>
             ${texts.chartLabelStandHours}: <strong>${currentEntry.standHours} hours (at least 1 minute per hour)</strong><br>
             ${texts.walkDistance}: <strong>${currentEntry.walkDistanceKm} km</strong>
         `;
@@ -654,8 +862,8 @@
                 routineTitle = texts.restDayRoutine;
             } else {
                 routine = currentLanguage === 'en' ? strengthRoutineEN : strengthRoutineES;
-                // For Day 1, Day 12, Day 13, Day 14, Day 15, Day 16, Day 17, Day 18, and Day 19, we show full descriptions. For other strength days, just names.
-                routineTitle = (currentEntry.id === "day-1" || currentEntry.id === "day-12" || currentEntry.id === "day-13" || currentEntry.id === "day-14" || currentEntry.id === "day-15" || currentEntry.id === "day-16" || currentEntry.id === "day-17" || currentEntry.id === "day-18" || currentEntry.id === "day-19") ? texts.exerciseInstructions : texts.sameRoutine;
+                // For Day 1, Day 12, Day 13, Day 14, Day 15, Day 16, Day 17, Day 18, Day 19, Day 20, Day 21, and Day 22, we show full descriptions. For other strength days, just names.
+                routineTitle = (currentEntry.id === "day-1" || currentEntry.id === "day-12" || currentEntry.id === "day-13" || currentEntry.id === "day-14" || currentEntry.id === "day-15" || currentEntry.id === "day-16" || currentEntry.id === "day-17" || currentEntry.id === "day-18" || currentEntry.id === "day-19" || currentEntry.id === "day-20" || currentEntry.id === "day-21" || currentEntry.id === "day-22") ? texts.exerciseInstructions : texts.sameRoutine;
             }
 
             const titleItem = document.createElement('li');
@@ -663,7 +871,7 @@
             exerciseListElement.appendChild(titleItem);
 
             // Dynamically add exercises based on the selected day's routine
-            // For Day 13, show 9 exercises. For Day 14, Day 15, Day 16, Day 17, Day 18, and Day 19, show 12 exercises. For Day 1 and Day 12, show the full routine.
+            // For Day 13, show 9 exercises. For Day 14-22, show 12 exercises. For Day 1 and Day 12, show the full routine.
             if (currentEntry.id === "day-13") {
                 const exercisesToDisplay = routine.slice(0, 9);
                 exercisesToDisplay.forEach(exercise => {
@@ -671,8 +879,8 @@
                     listItem.innerHTML = `<strong>${exercise.name}:</strong> ${exercise.desc}`;
                     exerciseListElement.appendChild(listItem);
                 });
-            } else if (currentEntry.id === "day-14" || currentEntry.id === "day-15" || currentEntry.id === "day-16" || currentEntry.id === "day-17" || currentEntry.id === "day-18" || currentEntry.id === "day-19") {
-                 const exercisesToDisplay = routine.slice(0, 12); // Show first 12 exercises for Day 14, 15, 16, 17, 18, and 19
+            } else if (parseInt(currentEntry.id.replace('day-', '')) >= 14 && parseInt(currentEntry.id.replace('day-', '')) <= 22) { // Covers Day 14 to Day 22
+                 const exercisesToDisplay = routine.slice(0, 12); // Show first 12 exercises
                  exercisesToDisplay.forEach(exercise => {
                     const listItem = document.createElement('li');
                     listItem.innerHTML = `<strong>${exercise.name}:</strong> ${exercise.desc}`;
@@ -684,7 +892,7 @@
                     listItem.innerHTML = `<strong>${exercise.name}:</strong> ${exercise.desc}`;
                     exerciseListElement.appendChild(listItem);
                 });
-            } else { // For other days, just list names
+            } else { // For other days (Day 2-6, 8-11), just list names
                 routine.forEach(exercise => {
                     const listItem = document.createElement('li');
                     listItem.innerHTML = `<strong>${exercise.name}</strong>`;
@@ -710,6 +918,7 @@
         updateDiaryDisplay();
         if(!progressSection.classList.contains('hidden')) {
             renderExerciseChart();
+            renderWeeklyComparisonChart();
         }
     }
 
@@ -722,7 +931,7 @@
         toggleProgressButton.textContent = isHidden ? uiTexts[currentLanguage].showProgress : uiTexts[currentLanguage].hideProgress;
         if (!isHidden) {
             renderExerciseChart();
-            updateExerciseDetails();
+            renderWeeklyComparisonChart();
         }
     }
 
@@ -744,9 +953,9 @@
 
     // Initial load
     document.addEventListener('DOMContentLoaded', () => {
-        // Set currentEntryIndex to Day 19 when the page loads
-        currentEntryIndex = diaryEntriesBase.findIndex(entry => entry.id === "day-19");
-        if (currentEntryIndex === -1) { // Fallback if Day 19 not found for some reason
+        // Set currentEntryIndex to Day 22 when the page loads (the latest daily entry)
+        currentEntryIndex = diaryEntriesBase.findIndex(entry => entry.id === "day-22");
+        if (currentEntryIndex === -1) { // Fallback if Day 22 not found for some reason
             currentEntryIndex = diaryEntriesBase.length - 1;
         }
 
